@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detailed Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="mb-4 text-center">Detailed Results</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <a href="{{ url_for('index') }}" class="btn btn-link mb-3">&larr; Back to Main</a>
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% else %}
+            <div class="table-responsive">
+                <div class="d-flex justify-content-center">
+                    {{ table_html|safe }}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</body>
+</html> 
