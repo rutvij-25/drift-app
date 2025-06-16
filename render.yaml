@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: drift-app
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:10000"
+    envVars:
+      - key: WEATHER_API_KEY
+        sync: false
