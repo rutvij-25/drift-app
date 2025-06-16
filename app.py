@@ -397,4 +397,4 @@ def detailed_results():
         return render_template('detailed_results.html', error=f'An error occurred: {str(e)}')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7860)
+    app.run(host='0.0.0.0', port=10000)
